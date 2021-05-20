@@ -1,0 +1,26 @@
+.todos-slide {
+    position: absolute;
+    top: 50px;
+    right: -75px;
+    width: 45px;
+    overflow: hidden;
+}
+
+.todos-slide button {
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+    margin: 10px 0px;
+    cursor: pointer;
+    border: none;
+    background-color: #D7FFF1; 
+}
+.todos-slide button i.iconfont {
+    color: #519D9E;
+}
+.todos-slide button:hover {
+    background-color: #285943;
+}
+.todos-slide button i.iconfont:hover {
+    color: #D7FFF1;
+}

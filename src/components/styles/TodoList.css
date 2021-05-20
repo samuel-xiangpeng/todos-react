@@ -1,0 +1,42 @@
+.sam-todos-list {
+    /* overflow: hidden; */
+}
+.todos-list {
+    list-style: none;
+    /* padding: 10px; */
+    color: white;
+    /* width: 500px; */
+    max-height: 500px;
+    /* white-space: nowrap; */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: -.2rem;
+    overflow: -moz-scrollbars-none;
+    overflow: -moz-scrollbars-none;
+}
+.todos-list li {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    /* padding: 10px; */
+}
+
+.todos-list li i {
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+.todos-list li .btn-controls {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+.todos-list li .btn-controls i {
+    margin-right: 10px;
+}
+.todos-list li .btn-controls i:hover {
+    color: #5c196b;
+}

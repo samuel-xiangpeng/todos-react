@@ -1,3 +1,5 @@
+@import 'http://at.alicdn.com/t/font_2559940_cp29ajg4zf.css';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,50 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  background-image: linear-gradient(50deg, #dfe9f3 0%, white 100%);
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 6px !important;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 6px !important;
+  background: #ffffff !important;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 5px !important;
+  box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5) !important;
+  background: rgba(63, 98, 131, 0.8) !important;
+  cursor: pointer !important;
+}
+
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow: inset 0 0 5px rgba(240, 240, 240, 0.5) !important;
+  border-radius: 0 !important;
+  background: rgba(240, 240, 240, 0.5) !important;
+  cursor: pointer !important;
+}
+
+/*placeholder字体设置*/ 
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #999;
+  font-size: 16px;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #999;
+  font-size: 16px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #999;
+  font-size: 16px;
+} 
