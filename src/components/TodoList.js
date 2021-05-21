@@ -2,7 +2,7 @@ import React from 'react'
 import './styles/TodoList.css'
 import Todo from './Todo'
 const TodoList = function (props) {
-    const { todos, toggleTodo, delTodo } = props
+    const { todos, toggleTodo, delTodo ,setTogglePopup} = props
     return (
         <div className='sam-todos-list'>
             <ul className='todos-list'>
@@ -13,7 +13,7 @@ const TodoList = function (props) {
                             todoMessage = todoMessage.split("").splice(0,23).join("") + '...'
                         }
                         
-                        return <Todo key={ todo.id } toggleTodo={ () => { toggleTodo(todo.id) } } onclick={ () => { delTodo(todo.id) } } { ...todo }>{ todoMessage }</Todo>
+                        return <Todo key={ todo.id } setTogglePopup={()=>{setTogglePopup(todo.id)}} toggleTodo={ () => { toggleTodo(todo.id) } } onclick={ () => { delTodo(todo.id) } } { ...todo }></Todo>
                     }) : null
                 }
             </ul>

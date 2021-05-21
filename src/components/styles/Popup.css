@@ -1,0 +1,78 @@
+.todos-popup {
+    position: fixed;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    max-height: 280px;
+    background-color: #58c9b9;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 1px #D7FFF1;
+    /* overflow: hidden; */
+}
+
+.todos-popup .popup-header {
+    background-color: #3b8686;
+    color: white;
+    padding-left: 20px;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.todos-popup button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+.todos-popup .popup-header button {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    color: D7FFF1;
+}
+
+.todos-popup .popup-header button i{
+    transition: all .5s ease-in;
+    color: #D7FFF1;
+}
+.todos-popup .popup-header button i:hover {
+    color: #58c9b9;
+    font-size: 20px;
+}
+
+.todos-popup .popup-body{
+    /* width: 400px; */
+    overflow: hidden;
+    /* background-color: black; */
+}
+.todos-popup .popup-body .popup-content {
+    overflow-y: scroll;
+    padding: 5px 10px 2px;
+    font-size: 18px;
+    color: white;
+    max-height: 200px;
+    min-height: 150px;
+    width: 406px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    /* background-color: blue; */
+}
+
+.todos-popup .popup-footer{
+    /* height: 50px; */
+    overflow: hidden;
+    transform: translateY(-10px);
+}
+
+.todos-popup .popup-footer button{
+    margin-right: 10px;
+    float: right;
+    padding: 10px;
+    width: 50px;
+    border-radius: 10%;
+    background-color: transparent;
+}

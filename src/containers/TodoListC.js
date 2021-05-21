@@ -1,6 +1,6 @@
 import TodoList from '../components/TodoList'
 import { connect } from 'react-redux'
-import { DelTodo, ToggleTodo } from '../actions'
+import { DelTodo, ToggleTodo,setTogglePopup } from '../actions'
 
 
 //下面这个函数对列表进行过滤
@@ -22,7 +22,8 @@ const getVisibleTodos = (todos, filter) => {
 
 const mapStateToProps = state => {
     return {
-        todos: getVisibleTodos(state.todos, state.toggleShowFILTER)
+        todos: getVisibleTodos(state.todos, state.toggleShowFILTER),
+        isPopup: state.togglePopup
     }
 }
 
@@ -33,7 +34,10 @@ const mapDispatchToProps = function (dispatch, ownProps) {
         },
         toggleTodo: function (id) {
             dispatch(ToggleTodo(id))
-        }
+        },
+        setTogglePopup: function (id) {
+            dispatch(setTogglePopup(id))
+         }
     }
 }
 

@@ -2,7 +2,6 @@ import Slide from '../components/Slide'
 import { connect } from 'react-redux'
 import { setToggleShowFILTER } from '../actions'
 const mapStateToProps = function (state) {
-    console.log(state)
     return {
         state
     }

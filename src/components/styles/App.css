@@ -19,3 +19,53 @@
     text-align: center;
     height: 10vh;
 }
+
+.App .randomTheme-btn {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: transparent;
+}
+.App .randomTheme-btn i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #519D9E;
+}
+
+.App .randomTheme-btn::before {
+    content: attr(data-tip);
+    width: 70px;
+    padding: 10px 5px;
+    /* white-space: nowrap; */
+    position: absolute;
+    background-color: #8CD790;
+    color: white;
+    border-radius: 5px;
+    top: -1px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    left: 56px;
+}
+.App .randomTheme-btn::after {
+    content: "";
+    border: 7px solid transparent;
+    border-right: 7px solid #8CD790;
+    position: absolute;
+    left: 42px;
+    top: 5px;
+    transform: rotateX(1.5deg);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.App .randomTheme-btn:hover::before {
+    opacity: 1;
+    left: 60.5px;
+}
+
+.App .randomTheme-btn:hover::after {
+    opacity: 1;
+    left: 46px;
+}

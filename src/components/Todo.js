@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 const Todo = function (props) {
-    const { onclick, completed,toggleTodo } = props
+    const { onclick, completed,toggleTodo,setTogglePopup,todoMessage } = props
     return (
         <li>
             <i className='iconfont icon-001-man' />
@@ -13,7 +13,7 @@ const Todo = function (props) {
                 }) } onClick={toggleTodo}/>
                 <i onClick={ onclick } className='btn iconfont icon-shanchu' />
             </span>
-            { props.children }
+            <span onClick={setTogglePopup}>{todoMessage}</span>
         </li>)
 }
 export default Todo

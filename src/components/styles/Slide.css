@@ -3,10 +3,10 @@
     top: 50px;
     right: -75px;
     width: 45px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-.todos-slide button {
+.todos-slide .btn {
     width: 45px;
     height: 45px;
     border-radius: 45px;
@@ -14,13 +14,50 @@
     cursor: pointer;
     border: none;
     background-color: #D7FFF1; 
+    transition: all .5s ease;
+    position: relative;
 }
-.todos-slide button i.iconfont {
+.todos-slide .btn i.iconfont {
     color: #519D9E;
 }
-.todos-slide button:hover {
+.todos-slide .btn:hover {
     background-color: #285943;
 }
-.todos-slide button i.iconfont:hover {
+.todos-slide .btn i.iconfont:hover {
     color: #D7FFF1;
+}
+
+/* button-hover显示提示文字 */
+.todos-slide button.btn::before {
+    content: attr(data-tip);
+    width: 70px;
+    padding: 10px 5px;
+    /* white-space: nowrap; */
+    position: absolute;
+    background-color: #8CD790;
+    color: white;
+    border-radius: 5px;
+    top: -1px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    left: 56px;
+}
+.todos-slide button.btn::after {
+    content: "";
+    border: 7px solid transparent;
+    border-right: 7px solid #8CD790;
+    position: absolute;
+    left: 42px;
+    top: 5px;
+    transform: rotateX(1deg);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.todos-slide button.btn:hover::before {
+    opacity: 1;
+    left: 60px;
+}
+.todos-slide button.btn:hover::after {
+    opacity: 1;
+    left: 46px;
 }
